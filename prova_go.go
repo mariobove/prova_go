@@ -188,7 +188,7 @@ func UpdateUser(d Userdata) error {
 		return err
 	}
 	defer db.Close()
-	userID := exists(d.Username)
+	userID := exist(d.Username)
 	if userID == -1 {
 		return errors.New("User does not exist")
 	}
